@@ -1,0 +1,71 @@
+<div class="button circle fixed btm-right no-border modal-active" id="new-post-btn" linked-modal="main-modal">+</div>
+<main>
+    {{#if signedInUser}}
+    <div logged_in="{{signedInUser.id}}" class="hidden"></div>
+    {{/if}}
+    <section class="post-row">
+        <h2 class="row-header">Most Bookmarked</h2>
+        <div class="row-container">
+            <div class="arrow-btn">
+                <svg width="50" height="100" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M10 50 l25 -37.5 c1 -1.5 3.5 -1 2.5 1 l-25 36.5 M10 50 l25 37.5 c1 1.5 3.5 1 2.5 -1 l-25 -36.5">
+                    </path>
+                </svg>
+            </div>
+            <div class="scroll-box" id="most-bookmarked-posts">
+                <div class="fill-row">
+                    <div class="loader"></div>
+                </div>
+            </div>
+            <div class="arrow-btn right">
+                <svg width="50" height="100" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M10 50 l25 -37.5 c1 -1.5 3.5 -1 2.5 1 l-25 36.5 M10 50 l25 37.5 c1 1.5 3.5 1 2.5 -1 l-25 -36.5">
+                    </path>
+                </svg>
+            </div>
+        </div>
+    </section>
+    <section class="post-row">
+        <h2 class="row-header"><a>Your Bookmarks</a></h2>
+        <div class="row-container">
+            <div class="arrow-btn">
+                <svg width="50" height="100" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M10 50 l25 -37.5 c1 -1.5 3.5 -1 2.5 1 l-25 36.5 M10 50 l25 37.5 c1 1.5 3.5 1 2.5 -1 l-25 -36.5">
+                    </path>
+                </svg>
+            </div>
+            <div class="scroll-box" id="users-posts">
+                <div class="fill-row">
+                    <div class="loader"></div>
+                </div>
+            </div>
+            <div class="arrow-btn right">
+                <svg width="50" height="100" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M10 50 l25 -37.5 c1 -1.5 3.5 -1 2.5 1 l-25 36.5 M10 50 l25 37.5 c1 1.5 3.5 1 2.5 -1 l-25 -36.5">
+                    </path>
+                </svg>
+            </div>
+        </div>
+    </section>
+</main>
+<dialog open class="modal" id="main-modal">
+    <div id="new-post">
+        <h2>New Post</h2>
+        <form>
+            <input id="title-input" type="text" required placeholder="Enter Post Title"></input>
+            <h4>Snippet</h4>
+            <textarea id="snippet-input" class="code" rows="5" required placeholder="Enter your code snippet here."></textarea>
+            <h4>Description</h4>
+            <textarea id="description-input" rows="3" placeholder="Enter your description here."></textarea>
+            <div class="button-group">
+                <button id="reset-btn" class="btn-red" type="reset">Clear</button>
+                <button id="submit-btn" class="btn-green" type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</dialog>
+<script src="./scripts/newPost.js"></script>
